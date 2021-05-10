@@ -1,0 +1,127 @@
+1. Identificar todas las OPERACIONES del sistema (todas las funciones)
+- CANTIDAD y DIVERSIDAD -
+agregar un producto
+eliminar un producto
+editar un producto
+leer un producto
+leer todos los productos
+leer vista de ultimos productos
+leer vista de los primeros productos
+leer estadistica de suma de todos los precios
+leer estadistica del precio máximo
+leer estadistica del precio minimo
+
+2. Agrupar dichas operaciones en torno a recursos
+productos
+  agregar un producto
+  eliminar un producto
+  editar un producto
+  leer un producto
+  leer todos los productos
+vistas
+  leer vista de ultimos productos
+  leer vista de los primeros productos
+estadisticas
+  leer estadistica de suma de todos los precios
+  leer estadistica del precio máximo
+  leer estadistica del precio minimo
+
+
+3. Especificar los métodos HTTP para cada operación de cada recurso
+
+productos
+  POST un producto
+  DELETE un producto
+  PUT un producto
+  GET un producto
+  GET todos los productos
+vistas
+  GET vista de ultimos productos
+  GET vista de los primeros productos
+estadisticas
+  GET estadistica de suma de todos los precios
+  GET estadistica del precio máximo
+  GET estadistica del precio minimo
+
+4. Definir detalles específicos (filtros, seguridad, encriptación, parámetros, respuestas)
+
+Recurso: productos
+  Petición
+    Método: POST 
+    URI: /productos
+    Cuerpo: { id, nombre, precio }
+    Cabeceras: Content-type: application/json
+  Respuesta:
+    Estado: HTTP 200 / OK
+    Cuerpo: { inserted: boolean }
+    Cabeceras: Content-type: application/json
+
+  Petición:
+    Método: DELETE
+    URI: /productos/id
+    Cuerpo: 
+    Cabeceras:
+  Respuesta:
+    Estado: HTTP 200 / OK
+    Cuerpo: { deleted: id_borrado }
+    Cabeceras: Content-type: application/json
+    
+  Petición:
+    Método: PUT
+    URI: /productos/id
+    Cuerpo: { nombre, precio }
+    Cabeceras: Content-type: application/json
+  Respuesta:
+    Estado: HTTP 200 / OK
+    Cuerpo: { updated: { id, nombre, precio } }
+    Cabeceras: Content-type: application/json
+
+  Petición:
+    Método: GET
+    URI: /productos/id
+    Cuerpo:
+    Cabeceras:
+  Respuesta:
+    Estado: HTTP 200 / OK
+    Cuerpo: { id, nombre, precio }
+    Cabeceras: Content-type: application/json 
+  
+  Petición:
+    Método: GET
+    URI: /productos
+    Cuerpo:
+    Cabeceras:
+  Respuesta:
+    Estado: HTTP 200 / OK
+    Cuerpo: [{ id, nombre, precio }]
+    Cabeceras: Content-type: application/json 
+
+
+Recurso: vistas
+  Petición:
+    Método: GET
+    URI: /vistas/id
+    Cuerpo:
+    Cabeceras:
+  Respuesta:
+    Estado: HTTP 200 / OK
+    Cuerpo: [{ id, nombre, precio }]
+    Cabeceras: Content-type: application/json 
+
+Recurso: estadisticas
+  GET /estadisticas/id
+  Petición:
+    Método: GET
+    URI: /estadisticas/id
+    Cuerpo:
+    Cabeceras:
+  Respuesta:
+    Estado: HTTP 200 / OK
+    Cuerpo: [{ clave, valor }]
+    Cabeceras: Content-type: application/json 
+
+VERSIONES
+
+Versión cero: Todo en server.js
+Primera versión: Datos de prueba en el código / Organización de archivos y carpetas
+Segunda versión: Bases de datos (MySQL*, PostgreSQL*, MongoDb)
