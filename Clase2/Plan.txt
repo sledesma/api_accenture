@@ -123,6 +123,6 @@ Recurso: estadisticas
 VERSIONES
 
 v0.1: Todo en server.js (OK)
-v0.2: Organización de archivos y carpetas
+v0.2: Organización de archivos y carpetas (OK)
 v1: Datos de prueba en el código
 v2: Bases de datos (MySQL*, PostgreSQL*, MongoDb)

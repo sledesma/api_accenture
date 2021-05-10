@@ -1,6 +1,9 @@
+const model = require('../models/productos');
+
 const controller = {};
 
 controller.postProductos = (req, res) => {
+  //model.push(req.body)
 	res.status(200).json({ inserted: true });
 };
 
@@ -19,26 +22,15 @@ controller.editProductos = (req, res) => {
 };
 
 controller.getOneProductos = (req, res) => {
-  res.status(200).json({
-    id: 1,
-    nombre: 'Celular',
-    precio: 2500
-  });
+  model.getOne(req.params.id, (err, rows, fields) => {
+    res.json(rows);
+  })
 }
 
 controller.getAllProductos = (req, res) => {
-  res.status(200).json([
-    {
-      id: 1,
-      nombre: 'Celular',
-      precio: 2500
-    },
-    {
-      id: 2,
-      nombre: 'Teclado',
-      precio: 1500
-    }
-  ])
+  model.getAll((err, rows, fields) => {
+    res.json(rows);
+  })
 };
 
 module.exports = controller;
