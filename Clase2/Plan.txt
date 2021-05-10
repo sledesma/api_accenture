@@ -122,6 +122,7 @@ Recurso: estadisticas
 
 VERSIONES
 
-Versión cero: Todo en server.js
-Primera versión: Datos de prueba en el código / Organización de archivos y carpetas
-Segunda versión: Bases de datos (MySQL*, PostgreSQL*, MongoDb)
+v0.1: Todo en server.js (OK)
+v0.2: Organización de archivos y carpetas
+v1: Datos de prueba en el código
+v2: Bases de datos (MySQL*, PostgreSQL*, MongoDb)
