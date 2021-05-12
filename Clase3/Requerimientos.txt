@@ -1,0 +1,15 @@
+Desarrollar una REST API para una tienda online. La tienda gestiona productos; de los cuales necesitamos saber el nombre, la descripción, el precio en pesos argentinos, la fecha de alta y el stock inicial. Asimismo, cada producto debe pertenecer a una sola categoría, de la cual se necesita saber su nombre y un color asignado. El color se usará para la interfaz de usuario en la web. La API no debe procesar compras, pero sí debe registrar todo cambio de stock. Cada cambio de stock será almacenado en la base de datos con los siguientes datos: fecha del cambio, concepto, referencia al producto y variacion del stock.
+Asimismo, al acceder a la información de cada producto, se debe agregar su cotización en dolar (Para obtener la cotización, vamos a utilizar la API estadísticasbcra).
+Como medidas de seguridad, la API deberá facilitar un token al momento de inicializarse. Dicho token deberá ser pasado por el cliente para poder operar. El token debe refrescarse cada vez que se reinicia el servidor.
+Listado de operaciones que debe poder hacer el cliente con la API una vez autentificado:
+  - Obtener un solo producto (con su cotización en dólar y stock actual)
+  - Obtener todos los productos (con su cotización en dólar y stock actual)
+  - Crear un nuevo producto
+  - Editar un producto ya existente (no debo poder cambiar la fecha de alta)
+  - Borrar un producto ya existente
+  - Obtener una sola categoría
+  - Obtener todas las categorías
+  - Crear una categoría
+  - Borrar una categoría
+  - Registrar cambios de stock
+  - Obtener el histórico de los cambios de stock de un producto

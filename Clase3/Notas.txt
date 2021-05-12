@@ -1,0 +1,6 @@
+DIAGRAMAS:
+Diagrama Entidad-Relación
+Diagrama de Casos de uso (Análisis Orientado a Objetos)
+
+Diagrama de Flujos de Datos (Análisis Estructurado)
+
