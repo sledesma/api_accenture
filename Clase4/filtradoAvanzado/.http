@@ -1,0 +1,13 @@
+POST http://localhost:3000/query
+Content-Type: application/json
+
+{
+  "fields": [
+    "name",
+    "id"
+  ],
+  "like": {
+    "campo": "name",
+    "valor": "t"
+  }
+}
