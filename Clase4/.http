@@ -1,2 +1,2 @@
 GET http://localhost:3000/dummy
-Authorization: BEARER token
+Authorization: BEARER 65905acf70b97b572240fc157c0b02d6
